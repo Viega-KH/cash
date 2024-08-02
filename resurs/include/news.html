@@ -1,0 +1,69 @@
+{% extends 'centui/base.html' %}
+{% load static %}
+
+{% block ui %}
+<section class="hero-wrap hero-wrap-2"
+    style="background-image: url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+                <h2 class="mb-2 bread">AXBOROT XIZMATI</h2>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{{ home }}">Bosh sahifa<i
+                                class="ion-ios-arrow-forward"></i></a></span> <span>Yangiliklar<i
+                            class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 ftco-animate fadeInUp ftco-animated">
+                <h3 class="mb-3">#. {{ new.title }}</h3>
+                <p>{{ new.content|safe }}</p>
+            </div>
+            <div class="col-lg-4 sidebar ftco-animate fadeInUp ftco-animated">
+                <div class="sidebar-box">
+                    <form action="#" class="search-form">
+                        <div class="form-group">
+                            <span class="icon icon-search"></span>
+                            <input type="text" class="form-control" placeholder="Qidirish">
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-box ftco-animate fadeInUp ftco-animated">
+                    <h3>So'ngi Yangiliklar</h3>
+
+                    {% for list in news_list %}
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="blog-img mr-4" href="{% url 'newdet' list.id %}"
+                            style="background-image: url({{ list.image.url }})"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="{% url 'newdet' list.id %}">{{ list.title|slice:":55" }}</a>
+                            </h3>
+                            <div class="meta">
+                                <div><a href="{% url 'newdet' list.id %}"><span class="icon-calendar"></span>
+                                        {{list.published_date }}</a></div>
+                                <div><a href=""><span class="icon-person"></span>Admin</a></div>
+                                <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    /* CKEditor ichidagi rasm uchun maxsus uslub */
+    .col-lg-8 p img {
+        max-width: 100%;
+        /* Rasm kengligini konteyner kengligidan oshmasligi uchun */
+        height: auto;
+        /* Rasm balandligini avtomatik sozlash */
+    }
+</style>
+{% endblock ui %}

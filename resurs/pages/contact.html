@@ -1,0 +1,105 @@
+{% extends 'centui/base.html' %}
+{% load static %}
+
+
+
+
+{% block ui %}
+<section class="hero-wrap hero-wrap-2"
+    style="background-image: url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+                <h2 class="mb-2 bread">BOSHQARMA</h2>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{{ home }}">Bosh sahifa<i
+                                class="ion-ios-arrow-forward"></i></a></span> <span>Murojatlar<i
+                            class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section testimony-section">
+	<div class="container">
+		<div class="wrapper">
+			<div class="row no-gutters">
+				<div class="col-md-7 d-flex align-items-stretch">
+					<div class="contact-wrap w-100 p-md-5 p-4">
+						<h3 class="mb-4">Murojat Uchun</h3>
+						<div id="form-message-warning" class="mb-4"></div>
+						<div id="form-message-success" class="mb-4">
+							Talab yoki taklifingizni yuborishingiz mumkun !
+						</div>
+						<form method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
+							<div class="row ftco-animate">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" name="name" id="name"
+											placeholder="Isim">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="number" class="form-control" name="phone" id="phone"
+											placeholder="Telfon Raqam">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input type="text" class="form-control" name="subject" id="subject"
+											placeholder="Mavzu">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="message" class="form-control" id="message" cols="30" rows="7"
+											placeholder="Murojat Matni"></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input type="submit" value="Yuborish" class="btn btn-primary">
+										<div class="submitting"></div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5 d-flex align-items-stretch">
+					<div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+						<h3 class="mb-4 mt-md-4" style="color: aliceblue; text-align: center;">Biz bilan bog`lanish
+						</h3>
+						<div class="col-md d-flex ftco-animate topper align-items-center align-items-stretch py-md-4">
+							<div class="icon d-flex justify-content-center align-items-center"><span
+									style="color: aliceblue;" class="icon-paper-plane"></span></div>
+							<div class="text" style="color: aliceblue;">
+								<span style="color: aliceblue;">Telegram:</span>
+								<span>youremail@email.com</span>
+							</div>
+						</div>
+						<div class="col-md d-flex ftco-animate topper align-items-center align-items-stretch py-md-4">
+							<div class="icon d-flex justify-content-center align-items-center"><span
+									style="color: aliceblue;" class="fa-solid fa-envelope"></span></div>
+							<div class="text" style="color: aliceblue;">
+								<span style="color: aliceblue;">Email:</span>
+								<span>youremail@email.com</span>
+							</div>
+						</div>
+						<div class="col-md d-flex ftco-animate topper align-items-center align-items-stretch py-md-4">
+							<div class="icon d-flex justify-content-center align-items-center"><span
+									style="color: aliceblue;" class="fa-solid fa-map-location"></span></div>
+							<div class="text" style="color: aliceblue;">
+								<span style="color: aliceblue;">Manzil:</span>
+								<span>Toshkent shahri, Mustaqillik ko‘chasi, 69-uy</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock ui %}
+    

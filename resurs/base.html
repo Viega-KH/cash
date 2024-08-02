@@ -1,0 +1,350 @@
+{% load static %}
+{% url 'home' as home %}
+{% url 'about' as about %}
+{% url 'leader' as leader %}
+{% url 'news' as news %}
+{% url 'newad' as newad %}
+{% url 'newad' as newad %}
+{% url 'tablesite' as tablesite %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yashnobod |</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'centui/css/open-iconic-bootstrap.min.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'centui/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'centui/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'centui/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'centui/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'centui/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'centui/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'centui/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'centui/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'centui/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'centui/css/main.css' %}">
+</head>
+
+<body>
+    {% if request.path == home %}
+    <div class="bg-top navbar-light d-flex py-2 align-items-center align-items-stretch"
+        style="background-color: #e8e8e873;">
+        <!-- <div class="container-fluid">
+            <nav class="header-nav">
+                <div class="row d-flex">
+                    <div class="col-md-6 d-none d-md-block">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item d-md-block">
+                                <a class="px-1 py-1 nav-link" href="about-us.html">
+                                    <i class="fas fa-angle-right"></i> &nbsp;About Us
+                                </a>
+                            </li>
+                            <li class="nav-item d-md-block">
+                                <a class="px-1 py-1 nav-link" href="contact-us.html">
+                                    <i class="fas fa-angle-right"></i> &nbsp;Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <ul class="nav">
+                            <li class="nav-item d-md-block">
+                                <a class="px-1 py-1 nav-link" href="contact-us.html">
+                                    Uzbek&nbsp;<i class="fas fa-angle-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div> -->
+
+    </div>
+    <div class="bg-top navbar-light bg-white">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-center align-items-stretch">
+                <div class="col-md-6 d-flex flex-column flex-md-row align-items-center py-2 px-0 px-md-3 text-center text-md-left">
+                    <img src="{% static 'centui/images/lOGOYA (1).png' %}" alt="Logo" class="mr-md-3 mb-3 mb-md-0" style="width: 80px; height: 80px;">
+                    <a class="navbar-brand d-flex flex-column topper" href="{% url 'home' %}">
+                        <div>
+                            <span style="font-size: 18px; text-transform: uppercase;">
+                                Yashnobod tuman<br>maktabgacha va maktab ta’limi bo‘limi
+                            </span>
+                        </div>
+                    </a>
+                </div>                
+                <div class="col-lg-6 d-none d-lg-flex" style="justify-items: end;justify-self: end;justify-content:end;">
+                    <div class="row d-flex">
+                        <div class="col-md topper d-flex align-items-center justify-content-end"
+                            style="justify-items: end;justify-self: end;justify-content:end;">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                <div class="icon d-flex justify-content-center align-items-center"><span
+                                        class="icon-paper-plane"></span></div>
+                                <div class="text">
+                                    <span>Telegram</span>
+                                    <span>youremail@email.com</span>
+                                </div>
+                            </div>
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                <div class="icon d-flex justify-content-center align-items-center"><span
+                                        class="icon-phone2"></span></div>
+                                <div class="text">
+                                    <span>Call</span>
+                                    <span>+ 99 123-45-67</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+
+    {% endif %}
+    <nav class="navbar navbar-expand-lg ftco-navbar-light sticky-top" id="ftco-navbar">
+        <div class="container d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span>
+            </button>
+            <form action="#" class="searchform order-lg-last" style="border-radius: 0%;">
+                <div class="form-group d-flex" style="margin-bottom: 30px;">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button type="submit" placeholder="" class="form-control search"><span
+                            class="ion-ios-search"></span></button>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item {% if request.path == home %}activ{% endif %} px-3 px-md-2 px-lg-0" style="font-weight: 800;"><a
+                            href="{{ home }}" style="font-weight: 800;" class="has-submenu nav-link">BOSH SAHIFA<span
+                                class="caret"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown px-3 px-md-2 px-lg-0 {% if request.path == about or request.path == leader %}activ{% endif %}"
+                        style="font-weight: 800;"><a href="#" style="font-weight: 800;" class="has-submenu nav-link"
+                            aria-expanded="false">BO'LIM&nbsp;&nbsp;<i
+                                class="fa-solid fa-chevron-down fa-2xs"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ about }}">
+                                    Bo'lim haqida </a>
+                            </li>
+                            <li>
+                                <a href="{{ leader }}">
+                                    Rahbariyat haqida </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-3 px-md-2 px-lg-0"
+                        style="font-weight: 800;"><a href="#" style="font-weight: 800;" class="has-submenu nav-link"
+                            aria-expanded="false">O'QUVCHILARGA&nbsp;&nbsp;<i
+                                class="fa-solid fa-chevron-down fa-2xs"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ tablesite }}">
+                                    Dars Jadval </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    To'garaklar </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Kutubxona </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Qo'ng'iroqlar </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-3 px-md-2 px-lg-0"
+                        style="font-weight: 800;"><a href="#" style="font-weight: 800;" class="has-submenu nav-link"
+                            aria-expanded="false">OTA-ONALARGA&nbsp;&nbsp;<i
+                                class="fa-solid fa-chevron-down fa-2xs"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">
+                                    Onlayn Qabul </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Huquq va Majburiyatlari </a>
+                            </li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="nav-item dropdown px-3 px-md-2 px-lg-0 {% if request.path == news or request.path == newad %}activ{% endif %}"
+                        style="font-weight: 800;"><a href="#" style="font-weight: 800;"
+                            class="has-submenu nav-link">AXBOROT XIZMATI&nbsp;&nbsp;<i
+                                class="fa-solid fa-chevron-down fa-2xs"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ news }}">
+                                    Yangiliklar </a>
+                            </li>
+                            <li>
+                                <a href="{{ newad }}">
+                                    E`lonlar </a>
+                            </li>
+                            <li>
+                                <a href="{{ news }}">
+                                    Me`yoriy Hujjatlari </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3 px-md-2 px-lg-0" style="font-weight: 800;"><a href="{% url 'contactsite' %}"
+                            style="font-weight: 800;" class="has-submenu nav-link">MUROJATLAR<span class="caret"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    {% block ui %}{% endblock ui %}
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Savollaringiz bormi?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+    
+                                <li><a href="#"><span class="icon icon-map-marker"></span><span class="text">Toshkent
+                                            shahri, Mustaqillik ko‘chasi,<br> 69-uy</span></a></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
+                                            210</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span
+                                            class="text">info@yourdomain.com</span></a></li>
+                                <li><a href="#"><span class="icon icon-paper-plane"></span><span
+                                            class="text">info@yourdomain.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Oxirgi blog</h2>
+    
+                        {% for list in newfooter %}
+                        <div class="block-21 mb-5 d-flex">
+                            <a class="blog-img mr-4" href="{% url 'newdet' list.id %}" style="background-image: url({{ list.image.url }});"></a>
+                            <div class="text">
+                                <h3 class="heading"><a href="{% url 'newdet' list.id %}">{{ list.title|slice:":35" }}</a>
+                                </h3>
+                                <div class="meta">
+                                    <div><a href="#"><span class="icon-calendar"></span> {{ list.published_date }}</a></div>
+                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                    <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+        
+    
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5 ml-md-4">
+                        <h2 class="ftco-heading-2">Havolalar</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Boshqarma</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Talim</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Yangiliklar</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>E`lonlar</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Murojatnoma</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Obuna bo`ling!</h2>
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control mb-2 text-center"
+                                    placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="form-control submit px-3">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2 mb-0">Biz kuzatib boring</h2>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-2">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+    
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Mualliflik huquqi &copy;
+                        <script>document.write(new Date().getFullYear());</script> Barcha huquqlar himoyalangan | <a
+                            href="" target="_blank">SOFTWARE SERVICES</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#3f7ec2" />
+        </svg></div>
+
+
+    <script src="{% static 'centui/js/jquery.min.js' %}"></script>
+    <script src="{% static 'centui/js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'centui/js/popper.min.js' %}"></script>
+    <script src="{% static 'centui/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'centui/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'centui/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'centui/js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'centui/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'centui/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'centui/js/aos.js' %}"></script>
+    <script src="{% static 'centui/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'centui/js/scrollax.min.js' %}"></script>
+    <script src="{% static 'centui/js/main.js' %}"></script>
+    <script src="{% static 'centui/js/select2.js' %}"></script>
+    {% include 'centui/include/home.html' %}
+    <script>
+        $(document).ready(function () {
+            // Select2 ni faollashtirish
+            $('.select2').select2();
+        });
+    </script>
+
+</body>
+
+</html>

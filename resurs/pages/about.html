@@ -1,0 +1,209 @@
+{% extends 'centui/base.html' %}
+{% load static %}
+
+
+
+
+{% block ui %}
+<section class="hero-wrap hero-wrap-2" style="background-image: url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-2 bread">BOSHQARMA</h2>
+          <p class="breadcrumbs"><span class="mr-2"><a href="{{ home }}">Bosh sahifa<i class="ion-ios-arrow-forward"></i></a></span> <span>Boshqarma Haqida<i class="ion-ios-arrow-forward"></i></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="ftco-section bg-white">
+	<div class="container">
+		<div class="row d-flex">
+			<div class="col-md-5 order-md-last wrap-about align-items-stretch">
+				<div class="wrap-about-border ftco-animate fadeInUp ftco-animated">
+					<div class="img" style="background-image: url(/static/centui/images/qctgrQ15913589328678_b.jpg);"></div>
+					<div class="text">
+						<h3>Maktab uz</h3>
+						<p>
+							1-11-sinflar uchun eng yirik umumtaʼlim onlayn maktabi hamda maktab oʻquv dasturi
+							boʻyicha videodarslar va boshqa materiallar platformasi.
+
+						</p>
+						<p><a href="https://maktab.uz/" class="btn btn-primary py-3 px-4">Batafsil</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7 wrap-about pr-md-4 ftco-animate fadeInUp ftco-animated">
+				<h2 class="mb-4">Agar siz maktabga bora olmasangiz, maktab sizning uyingizga kelishi mumkin.</h2>
+				<p>Maktab.uz - bu xalqaro standartlarga javob beradigan va maktab o'quvchilari uchun yuqori sifatli
+					uzluksiz masofaviy ta'limni ta'minlaydigan ilg'or raqamli ta'lim texnologiyasi. Platforma
+					o'qituvchilarga ham, ota -onalarga ham o'quvchilarning rivojlanish darajasini kuzatish va
+					mavzular mazmuni bilan tanishish uchun keng imkoniyatlar beradi.</p>
+				<div class="row mt-5">
+					<div class="col-lg-6">
+						<div class="services active text-center">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-collaboration"></span></div>
+							<div class="text media-body">
+								<!-- <h3>Qulay</h3> -->
+								<p>Materiallaridan ota-onalari foydalana oladilar</p>
+							</div>
+						</div>
+						<div class="services text-center">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+							<div class="text media-body">
+								<!-- <h3>Platforma</h3> -->
+								<p>Maktab.uz – bu masofaviy ta’limning to‘laqonli ekotizimidir</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="services text-center">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+							<div class="text media-body">
+								<!-- <h3>Platforma</h3> -->
+								<p>Doimiy ravishda to‘ldirilib va yangilanib boriladi</p>
+							</div>
+						</div>
+						<div class="services text-center">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+							<div class="text media-body">
+								<!-- <h3>Capital Market</h3> -->
+								<p>Ba’zilar uchun ushbu platforma repetitorning o‘rnini bosadi</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="ftco-intro ftco-no-pb img" style="background-image: url(/static/centui/images/image-1.jpg);">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate fadeInUp ftco-animated">
+				<h2 class="mb-0">Tuman Maktabgacha va Maktab Ta’limi Bo‘limi</h2>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="ftco-counter" id="section-counter" style="width: 100%;">
+	<div class="container">
+		<div class="row d-md-flex align-items-center justify-content-center">
+			<div class="wrapper">
+				<div class="row d-md-flex align-items-center">
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.schools }}">0</strong>
+								<span>Maktablar</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.techers }}">0</strong>
+								<span>O'qituvchi</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.student }}">0</strong>
+								<span>O'quvchilar</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.educati }}">0</strong>
+								<span>Maktabgacha T.T</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.techedu }}">0</strong>
+								<span>Tarbiyachilar</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18">
+							<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="{{ statest.chiledu }}">0</strong>
+								<span>Tarbiyalanuvchilar</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url({% static 'centui/images/schoolbanner.jpg' %});"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row justify-content-end">
+			<div class="col-md-6 py-5 px-md-5">
+
+				<div class="tabs">
+					<input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
+					<label class="label" for="tab-1">Maktablar</label>
+					<form class="panel  ftco-animate">
+						<select name="" id="select-school" class="form-control select2 select-school">
+							
+							{% for list in school %}
+							<option value="{{ list.id }}">&nbsp;&nbsp;{{ list.title }} - maktab</option>
+							{% endfor %}
+							
+						</select>
+						<div class="form-group py-2">
+							<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+							<button id="send-selected1" type="button" class="btn btn-primary rounded-0">Ko`rish</button>
+						</div>
+					</form>
+					<input class="input" name="tabs" type="radio" id="tab-2" />
+					<label class="label" for="tab-2">Davlat Maktabgacha Ta’lim Tashkeloti</label>
+					<form class="panel  ftco-animate">
+						<select name="" id="" class="form-control select2 select-slevel" style="width: 400px;">
+							{% for list in slevel %}
+							<option value="{{ list.id }}">&nbsp;&nbsp;{{ list.title }} - maktab</option>
+							{% endfor %}
+						</select>
+						<div class="form-group py-2">
+							<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+							<button id="send-selected2" type="button" class="btn btn-primary rounded-0">Ko`rish</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6 py-5 px-md-5">
+				<table class="table table-bordered" id='table' style="desplay:none">
+					<thead>
+						<tr class='ftco-animate' style='color:#fff'>
+							<th id='th1' ></th>
+							<th id='th2'></th>
+							<th id='th3'></th>
+						</tr>
+					</thead>
+					<tbody id="table-body" style='color:#fff'>
+						<!-- AJAX orqali ma'lumotlar shu yerga qo'shiladi -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock ui %}
+    

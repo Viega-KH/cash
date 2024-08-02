@@ -1,0 +1,94 @@
+{% extends 'centui/base.html' %}
+{% load static %}
+
+
+
+
+{% block ui %}
+<section class="hero-wrap hero-wrap-2" style="background-image: url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center fadeInUp ftco-animated">
+          <h2 class="mb-2 bread">AXBOROT XIZMATI</h2>
+          <p class="breadcrumbs"><span class="mr-2"><a href="{{ home }}">Bosh sahifa<i class="ion-ios-arrow-forward"></i></a></span> <span>Yangiliklar<i class="ion-ios-arrow-forward"></i></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            {% for list in page_obj %}
+            <div class="col-md-6 col-lg-4 ftco-animate fadeInUp ftco-animated">
+                <div class="blog-entry">
+                    <a href="{% url 'newdet' list.id %}" class="block-20 d-flex align-items-end"
+                        style="background-image: url('{{ list.image.url }}');">
+                        <div class="meta-date text-center p-2">
+                            <span class="day">{{ list.published_date|date:"d" }}</span>
+                            <span class="mos">{{ list.published_date|date:"F" }}</span>
+                            <span class="yr">{{ list.published_date|date:"Y" }}</span>
+                        </div>
+                    </a>
+                    <div class="text bg-white p-4">
+                        <h3 class="heading"><a href="{% url 'newdet' list.id %}">{{ list.title|slice:":55" }}</a></h3>
+                        <div class="d-flex align-items-center mt-4">
+                            <p class="mb-0"><a href="{% url 'newdet' list.id %}" class="btn btn-primary">Batafsil <span
+                                        class="ion-ios-arrow-round-forward"></span></a></p>
+                            <p class="ml-auto mb-0">
+                                <!-- <a href="#" class="mr-2">Admin</a> -->
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
+                        {% else %}
+                        <li class=""><a href="#">«</a></li>
+                        {% endif %}
+            
+                        {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                        <li class="active"><a href="#">{{ num }}</a></li>
+                        {% else %}
+                        <li><a href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+            
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
+                        {% else %}
+                        <li class=""><a href="#">»</a></li>
+                        {% endif %}
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock ui %}
+
+<div class="row mt-5">
+    <div class="col text-center">
+      <div class="block-27">
+        <ul>
+          <li><a href="#">&lt;</a></li>
+          <li class="active"><span>1</span></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&gt;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>

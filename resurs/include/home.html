@@ -1,0 +1,65 @@
+<script>
+  $(document).ready(function () {
+    $('#table').hide();
+    $('#send-selected1').on('click', function () {
+      let school = $('.select-school').val()
+      let csrftoken = $('input[name="csrfmiddlewaretoken"]').val();
+      $.ajax({
+        url: '{% url "homeselekt" %}',
+        type: 'POST',
+        data: {
+          'school': school,
+          'csrfmiddlewaretoken': csrftoken
+        },
+        success: function (response) {
+          $('#table-body').empty();
+          if (response) {
+            $('#table').show();
+            $('#th1').text(" Maktab (ta) ");
+            $('#th2').text(" O`qituvchilar (ta) ");
+            $('#th3').text(' O`quvchilar (ta) ');
+          }
+          let row = '<tr>' +
+            '<td>' + response.title + '</td>' +
+            '<td>' + response.number_pt + '</td>' +
+            '<td>' + response.number_s + '</td>' +
+            '</tr>';
+          $('#table-body').append(row);
+        },
+        error: function (xhr, status, error) {
+          console.error('Xato:', error);
+        }
+      });
+    });
+    $('#send-selected2').on('click', function () {
+      let slevel = $('.select-slevel').val()
+      let csrftoken = $('input[name="csrfmiddlewaretoken"]').val();
+      $.ajax({
+        url: '{% url "homeselekt" %}',
+        type: 'POST',
+        data: {
+          'slevel': slevel,
+          'csrfmiddlewaretoken': csrftoken
+        },
+        success: function (response) {
+          if (response) {
+            $('#table').show();
+            $('#th1').text(" D.M.T.M (ta) ");
+            $('#th2').text(" Tarbiyachilar (ta) ");
+            $('#th3').text(' Tarbiyalanuvchilar (ta) ');
+          }
+          $('#table-body').empty();
+          let row = '<tr>' +
+            '<td>' + response.title + '</td>' +
+            '<td>' + response.number_ep + '</td>' +
+            '<td>' + response.number_ch + '</td>' +
+            '</tr>';
+          $('#table-body').append(row);
+        },
+        error: function (xhr, status, error) {
+          console.log('Xato:', error);
+        }
+      });
+    });
+  });
+</script>
